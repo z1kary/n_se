@@ -8,8 +8,8 @@ const T_API = `https://api.telegram.org/bot${process.env.TOKEN}`
 const WEBHOOK_URL = process.env.URL + `/webhook/${process.env.TOKEN}`
 
 const app = express()
-app.use(cors({origin: "*"}))
-app.options(process.env.CLIENT_URL, cors());
+app.use(cors())
+// app.options(process.env.CLIENT_URL, cors());
 app.use(bodyParser.json())
 
 const init = async () => {
